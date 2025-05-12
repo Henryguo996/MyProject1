@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阿和的購物網站</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/pages/checkout.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="http://127.0.0.1:3000/index.html">
+        <img src="./images/icons/logo.svg" alt="阿和的購物網站" />
+        <h1>馬上開始SHOOPING!~</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> 回首頁</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i> 會員登入</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-receipt"></i> 訂單查詢</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> 購物車</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="checkout-row">
+        <div class="checkout-left">
+          <div class="product-row">
+            <img
+              class="product-image"
+              src="images/product_images/product_image1.jpg"
+            />
+            <div class="product-information">
+              <p class="product-name">
+                海底撈【自煮火鍋（麻辣嫩牛/番茄牛肉）】
+              </p>
+              <div class="product-detail">
+                <div class="product-detail-left">
+                  <div class="product-price">
+                    <p class="origin-price">$300</p>
+                    <p class="discount-price">$189</p>
+                  </div>
+                  <div class="buy-num-row">
+                    <p class="num-p">數量</p>
+                    <input class="buy-num" value="1" />
+                  </div>
+                </div>
+                <div class="product-detail-right">
+                  <button class="delete-from-cart">刪除</button>
+                </div>
+              </div>
+              <hr class="product-information-hr" />
+              <div class="delivery-options">
+                <p class="delivery-option-p">運送方式</p>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    checked
+                    class="delivery-option-input"
+                    name="delivery-option-0"
+                  />
+                  <p class="delivery-option-name">自行取貨</p>
+                  <p class="delivery-option-price">$0</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-0"
+                  />
+                  <p class="delivery-option-name">超商取貨</p>
+                  <p class="delivery-option-price">$60</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-0"
+                  />
+                  <p class="delivery-option-name">宅配到家</p>
+                  <p class="delivery-option-price">$120</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-row">
+            <img
+              class="product-image"
+              src="images/product_images/product_image4.jpg"
+            />
+            <div class="product-information">
+              <p class="product-name">
+                白色美背復古三門二抽二格衣櫃 衣櫥 臥室收納 大容量置物
+              </p>
+              <div class="product-detail">
+                <div class="product-detail-left">
+                  <div class="product-price">
+                    <p class="origin-price">$4180</p>
+                    <p class="discount-price">$2599</p>
+                  </div>
+                  <div class="buy-num-row">
+                    <p class="num-p">數量</p>
+                    <input class="buy-num" value="1" />
+                  </div>
+                </div>
+                <div class="product-detail-right">
+                  <button class="delete-from-cart">刪除</button>
+                </div>
+              </div>
+              <hr class="product-information-hr" />
+              <p class="delivery-option-p">運送方式</p>
+              <div class="delivery-options">
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    checked
+                    class="delivery-option-input"
+                    name="delivery-option-1"
+                  />
+                  <p class="delivery-option-name">自行取貨</p>
+                  <p class="delivery-option-price">$0</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-1"
+                  />
+                  <p class="delivery-option-name">超商取貨</p>
+                  <p class="delivery-option-price">$60</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-1"
+                  />
+                  <p class="delivery-option-name">宅配到家</p>
+                  <p class="delivery-option-price">$120</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-row">
+            <img
+              class="product-image"
+              src="images/product_images/product_image9.jpg"
+            />
+            <div class="product-information">
+              <p class="product-name">
+                3色短襪 男短襪 男生襪子 運動襪 撞色 輕薄透氣 棉襪 女生襪 彈性襪
+                吸汗
+              </p>
+              <div class="product-detail">
+                <div class="product-detail-left">
+                  <div class="product-price">
+                    <p class="origin-price">$50</p>
+                    <p class="discount-price">$6</p>
+                  </div>
+                  <div class="buy-num-row">
+                    <p class="num-p">數量</p>
+                    <input class="buy-num" value="1" />
+                  </div>
+                </div>
+                <div class="product-detail-right">
+                  <button class="delete-from-cart">刪除</button>
+                </div>
+              </div>
+              <hr class="product-information-hr" />
+              <div class="delivery-options">
+                <p class="delivery-option-p">運送方式</p>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    checked
+                    class="delivery-option-input"
+                    name="delivery-option-2"
+                  />
+                  <p class="delivery-option-name">自行取貨</p>
+                  <p class="delivery-option-price">$0</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-2"
+                  />
+                  <p class="delivery-option-name">超商取貨</p>
+                  <p class="delivery-option-price">$60</p>
+                </div>
+                <div class="delivery-option">
+                  <input
+                    type="radio"
+                    class="delivery-option-input"
+                    name="delivery-option-2"
+                  />
+                  <p class="delivery-option-name">宅配到家</p>
+                  <p class="delivery-option-price">$120</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="checkout-right">
+          <h2 class="checkout-summary">訂單總結</h2>
+          <p class="checkout-items">總共 3 樣商品</p>
+          <p class="items-price">
+            <span>金額 : </span>
+            <span>$5000</span>
+          </p>
+          <p class="delivery-price">
+            <span>運費 : </span>
+            <span>$800</span>
+          </p>
+          <hr class="checkout-summary-hr" />
+          <p class="total-price">
+            <span>總額 : </span>
+            <span>$5800</span>
+          </p>
+          <button class="checkout-button">結帳</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
