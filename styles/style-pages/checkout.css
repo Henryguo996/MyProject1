@@ -128,17 +128,17 @@ body main button.delete-from-cart {
   width: 80px;
   font-size: 16px;
   padding: 8px 0px;
-  background-color: #f86c45;
+  background-color: #33ffff;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
 body main button.delete-from-cart:hover {
-  background-color: #f87a58;
+  background-color: #33ffff;
 }
 body main button.delete-from-cart:active {
-  background-color: #fc9376;
+  background-color: #33ffff;
 }
 body main p.delivery-option-p {
   text-align: start;
@@ -207,7 +207,7 @@ body main button.checkout-button {
   margin-top: 40px;
   font-size: 20px;
   width: 100%;
-  background-color: #f86c45;
+  background-color: #33ffff;
   color: white;
   border: none;
   border-radius: 10px;
@@ -216,10 +216,10 @@ body main button.checkout-button {
   margin-bottom: 10px;
 }
 body main button.checkout-button:hover {
-  background-color: #f87a58;
+  background-color: #33ffff;
 }
 body main button.checkout-button:active {
-  background-color: #fc9376;
+  background-color: #33ffff;
 }
 
 @media screen and (max-width: 700px) {

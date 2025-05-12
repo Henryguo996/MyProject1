@@ -1,5 +1,8 @@
 import { cart, addToCart, getCartNum } from "../../data/cart.js";
 import { products } from "../../data/products.js";
+import { renderCarNums } from "../components/renderCarNum.js";
+
+renderCarNums();
 
 let html = "";
 products.forEach((product) => {
@@ -40,7 +43,5 @@ document.querySelectorAll(".add-to-cart").forEach((button) => {
 
     const cartNum = getCartNum();
     document.querySelector(".cart-num").innerHTML = cartNum;
-    //console.log(cartNum);
-    //console.log(cart);
   });
 });

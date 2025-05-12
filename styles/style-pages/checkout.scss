@@ -155,7 +155,7 @@ body {
       width: 80px;
       font-size: 16px;
       padding: 8px 0px;
-      background-color: #f86c45;
+      background-color: $themeColor;
       color: white;
       border: none;
       border-radius: 10px;
@@ -163,11 +163,11 @@ body {
     }
 
     button.delete-from-cart:hover {
-      background-color: #f87a58;
+      background-color: $themeColor;
     }
 
     button.delete-from-cart:active {
-      background-color: #fc9376;
+      background-color: $themeColor;
     }
 
     p.delivery-option-p {
@@ -250,7 +250,7 @@ body {
       margin-top: 40px;
       font-size: 20px;
       width: 100%;
-      background-color: #f86c45;
+      background-color: $themeColor;
       color: white;
       border: none;
       border-radius: 10px;
@@ -260,11 +260,11 @@ body {
     }
 
     button.checkout-button:hover {
-      background-color: #f87a58;
+      background-color: $themeColor;
     }
 
     button.checkout-button:active {
-      background-color: #fc9376;
+      background-color: $themeColor;
     }
   }
 }

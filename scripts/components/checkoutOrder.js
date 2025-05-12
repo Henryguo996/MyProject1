@@ -1,6 +1,8 @@
 import { cart, deleteFromCart, updateCart } from "../../data/cart.js";
-import { products } from "../../data/products.js";
+import { getProduct } from "../../data/products.js";
 import { deliveryOptions } from "../../data/deliveryOptions.js";
+import { renderCheckoutPrice } from "./checkoutPrice.js";
+import { renderCarNums } from "./renderCarNum.js";
 
 export function renderCheckoutOrder() {
   function generateDeliveryOptions(productId, deliveryId) {
@@ -27,13 +29,7 @@ export function renderCheckoutOrder() {
   let html = "";
   cart.forEach((item) => {
     const productId = item.id;
-    let cartItem;
-
-    products.forEach((product) => {
-      if (product.id === productId) {
-        cartItem = product;
-      }
-    });
+    let cartItem = getProduct(productId);
     html += `
           <div class="product-row js-product-row-${cartItem.id}">
             <img class="product-image" src="${cartItem.img}" />
@@ -83,6 +79,8 @@ export function renderCheckoutOrder() {
       const productId = button.dataset.productId;
       deleteFromCart(productId);
       document.querySelector(`.js-product-row-${productId}`).remove();
+      renderCheckoutPrice();
+      renderCarNums();
     });
   });
 
@@ -91,6 +89,7 @@ export function renderCheckoutOrder() {
       const productId = input.dataset.productId;
       const deliveryId = input.dataset.deliveryId;
       updateCart(productId, deliveryId, false);
+      renderCheckoutPrice();
     });
   });
 
@@ -99,6 +98,8 @@ export function renderCheckoutOrder() {
       const productId = input.dataset.productId;
       const buyNum = Number(input.value);
       updateCart(productId, false, buyNum);
+      renderCheckoutPrice();
+      renderCarNums();
     });
   });
 }

@@ -84,3 +84,13 @@ export const products = [
     discountPrice: 300,
   },
 ];
+
+export function getProduct(productId) {
+  let returnProduct;
+  products.forEach((product) => {
+    if (product.id === productId) {
+      returnProduct = product;
+    }
+  });
+  return returnProduct;
+}
