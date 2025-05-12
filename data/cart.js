@@ -8,7 +8,7 @@ function updateStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-export function addToCart(productId) {
+export function addToCart(productId, buyNum = 1) {
   let cartItem;
   cart.forEach((item) => {
     if (item.id === productId) {
@@ -16,7 +16,7 @@ export function addToCart(productId) {
     }
   });
   if (cartItem) {
-    cartItem.num += 1;
+    cartItem.num += buyNum;
   } else {
     cart.push({
       id: productId,

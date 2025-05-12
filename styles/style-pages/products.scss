@@ -175,16 +175,16 @@ body {
         width: 200px;
         font-size: 18px;
         padding: 15px 0px;
-        background-color: #f86c45;
+        background-color: $themeColor;
         color: white;
         border: none;
         border-radius: 10px;
         cursor: pointer;
         &:hover {
-          background-color: #f87a58;
+          background-color: $themeColor;
         }
         &:active {
-          background-color: #fc9376;
+          background-color: $themeColor;
         }
       }
 

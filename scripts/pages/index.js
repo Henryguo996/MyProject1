@@ -8,7 +8,7 @@ let html = "";
 products.forEach((product) => {
   html += `
             <div class="product">
-              <a href="#">
+              <a href="product.html#${product.id}">
                 <img
                   title="product_image1"
                   src="${product.img}"
@@ -21,7 +21,9 @@ products.forEach((product) => {
                 }</p>
                 
               </a>
-                <div class="add-success hidden-element">
+                <div class="add-success hidden-element js-add-success-${
+                  product.id
+                }">
                 <img class="check-icon" src="images/icons/check.png" />
                 <p class="add-success-p">加入購物車</p>
               </div>
@@ -33,15 +35,29 @@ products.forEach((product) => {
     `;
 });
 
+function showAddSuccess(productId) {
+  const successElement = document.querySelector(`.js-add-success-${productId}`);
+  if (successElement.classList.contains("hidden-element")) {
+    successElement.classList.remove("hidden-element");
+    successElement.classList.add("visible-element");
+
+    setTimeout(() => {
+      successElement.classList.remove("visible-element");
+      successElement.classList.add("hidden-element");
+    }, 1000);
+  }
+}
+
 document.querySelector(".products").innerHTML = html;
 
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
-    let productId = button.dataset.productId;
+    const productId = button.dataset.productId;
     addToCart(productId);
-
-    const cartNum = getCartNum();
-    document.querySelector(".cart-num").innerHTML = cartNum;
+    renderCarNums();
+    showAddSuccess(productId);
+    //const cartNum = getCartNum();
+    //document.querySelector(".cart-num").innerHTML = cartNum;
   });
 });
