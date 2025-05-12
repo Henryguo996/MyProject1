@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阿和的購物網站</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/pages/members.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="http://127.0.0.1:3000/index.html">
+        <img src="./images/icons/logo.svg" alt="阿和的購物網站" />
+        <h1>馬上開始SHOOPING!~</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> 回首頁</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i> 會員登入</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-receipt"></i> 訂單查詢</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> 購物車</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="info-members">
+        <div>
+          <h3>會員專區</h3>
+        </div>
+      </section>
+      <section class="members">
+        <div>
+          <form action="/signup" method="POST">
+            <h2>註冊新會員</h2>
+            <input
+              type="text"
+              name="name"
+              placeholder="名稱"
+              value=""
+              onkeyup="value=value.replace(/\s+/g,'')"
+            /><br />
+            <input
+              type="text"
+              name="email"
+              placeholder="電子郵件"
+              minlength="3"
+              maxlength="20"
+              value=""
+              onkeyup="value=value.replace(/\s+/g,'')"
+            /><br />
+            <input
+              type="password"
+              name="password"
+              minlength="3"
+              maxlength="20"
+              pattern="[0-9a-fA-F]{6,8}"
+              value=""
+              onkeyup="value=value.replace(/\s+/g,'')"
+              placeholder="新增密碼6-8位數"
+            /><br />
+            <input
+              type="password"
+              name="password2"
+              minlength="3"
+              maxlength="20"
+              pattern="[0-9a-fa-F]{6,8}"
+              value=""
+              onkeyup="value=value.replace(/\s+/g,'')"
+              placeholder="確認密碼"
+            /><br /><br />
+            <button class="btn1">註冊</button><br />
+          </form>
+        </div>
+        <div>
+          <form action="/signin" method="POST">
+            <h2>會員登入</h2>
+            <input type="text" name="email" placeholder="電子郵件" /><br />
+            <input type="password" name="password" placeholder="密碼" /><br />
+            <button>登入</button><br />
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
