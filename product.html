@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阿和的購物網站</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/general.css" />
+    <link rel="stylesheet" href="./styles/pages/products.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="http://127.0.0.1:3000/index.html">
+        <img src="./images/icons/logo.svg" alt="阿和的購物網站" />
+        <h1>馬上開始SHOOPING!~</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> 回首頁</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i> 會員登入</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-receipt"></i> 訂單查詢</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> 購物車</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="info-products">
+        <section class="info-right">
+          <h3>全站商品</h3>
+          <section class="search">
+            <input class="search-input" placeholder="搜尋" />
+            <button class="search-button">
+              <img class="search-icon" src="./images/icons/search.svg" />
+            </button>
+          </section>
+        </section>
+
+        <div class="js-product-info">
+          <div class="product-block">
+            <img
+              class="product-image"
+              src="images/product_images/product_image1.jpg"
+            />
+            <div class="product-information">
+              <h1 class="product-name">product-image1【product-image1】</h1>
+
+              <div class="product-price">
+                <p class="origin-price">$300</p>
+                <p class="discount-price">優惠價$189</p>
+              </div>
+
+              <div class="buy-num-row">
+                <p class="num-p">數量</p>
+                <select class="buy-num">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <button class="add-to-cart">加入購物車</button>
+              <div class="add-success hidden-element">
+                <img class="check-icon" src="images/icons/check.png" />
+                <p class="add-success-p">加入購物車</p>
+              </div>
+            </div>
+          </div>
+          <div class="description-block">
+            <p class="description-p">商品描述</p>
+            <p class="product-description">
+              【product-image1【product-image1】】<br />
+              容量 192g克 <br />
+              商品來源國家 台灣 <br />
+              商品高度 8.2000 <br />
+              商品寬度 34.4000 <br />
+              保存天數 300天 <br />
+              保存溫層 常溫 <br />
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="logo">
+        <a href="">
+          <img src="./images/icons/logo.svg" alt="logo" />
+          <h3>阿和的購物網站</h3>
+        </a>
+      </section>
+      <section class="links">
+        <a href="#"
+          ><img
+            title="facebook"
+            src="./images/icons/facebook.svg"
+            alt="facebook"
+          />
+          <p>Facebook</p></a
+        >
+        <a href="#"
+          ><img
+            title="instagram"
+            src="./images/icons/instagram.svg"
+            alt="instagram"
+          />
+          <p>Instagram</p></a
+        >
+        <a href="#"
+          ><img
+            title="youtube"
+            src="./images/icons/youtube.svg"
+            alt="youtube"
+          />
+          <p>YouTube</p></a
+        >
+        <a href="#"
+          ><img title="LINE" src="./images/icons/line.svg" alt="line" />
+          <p>LINE官方帳號</p></a
+        >
+      </section>
+    </footer>
+  </body>
+</html>
