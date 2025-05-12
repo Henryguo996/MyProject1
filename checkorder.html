@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>訂單查詢</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+
+    <link rel="stylesheet" href="./styles/pages/checkorder.css" />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="http://127.0.0.1:3000/index.html">
+        <img src="./images/icons/logo.svg" alt="阿和的購物網站" />
+        <h1>馬上開始SHOOPING!~</h1>
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> 回首頁</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-user"></i> 會員登入</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-receipt"></i> 訂單查詢</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> 購物車</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>訂單查詢</h1>
+    <div class="search-container">
+      <label for="orderId">訂單號：</label>
+      <input type="text" id="orderId" placeholder="請輸入訂單號" />
+      <label for="customerName">客戶姓名：</label>
+      <input type="text" id="customerName" placeholder="請輸入客戶姓名" />
+      <label for="productName">商品名稱：</label>
+      <input type="text" id="productName" placeholder="請輸入商品名稱" />
+      <button id="searchBtn">查詢</button>
+      <button id="resetBtn">重置</button>
+    </div>
+
+    <table id="orderTable" class="display">
+      <thead>
+        <tr>
+          <th>訂單號</th>
+          <th>客戶姓名</th>
+          <th>商品名稱</th>
+          <th>數量</th>
+          <th>總金額</th>
+          <th>狀態</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ORD001</td>
+          <td>王小明</td>
+          <td>筆記型電腦</td>
+          <td>1</td>
+          <td>30000</td>
+          <td>已出貨</td>
+        </tr>
+        <tr>
+          <td>ORD002</td>
+          <td>陳美麗</td>
+          <td>滑鼠</td>
+          <td>2</td>
+          <td>1200</td>
+          <td>處理中</td>
+        </tr>
+        <tr>
+          <td>ORD003</td>
+          <td>李大仁</td>
+          <td>鍵盤</td>
+          <td>1</td>
+          <td>800</td>
+          <td>已完成</td>
+        </tr>
+        <!-- 更多訂單資料 -->
+      </tbody>
+    </table>
+
+    <!-- 引入 jQuery 和 DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 初始化 DataTable
+        var table = $("#orderTable").DataTable({
+          language: {
+            url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/zh-HANT.json",
+          },
+          pageLength: 5,
+        });
+
+        // 查詢按鈕點擊事件
+        $("#searchBtn").on("click", function () {
+          var orderId = $("#orderId").val().trim();
+          var customerName = $("#customerName").val().trim();
+          var productName = $("#productName").val().trim();
+
+          // 設定每一欄的搜尋條件
+          table.columns(0).search(orderId);
+          table.columns(1).search(customerName);
+          table.columns(2).search(productName);
+          table.draw();
+        });
+
+        // 重置按鈕點擊事件
+        $("#resetBtn").on("click", function () {
+          $("#orderId").val("");
+          $("#customerName").val("");
+          $("#productName").val("");
+          table.columns().search("").draw();
+        });
+      });
+    </script>
+  </body>
+</html>
