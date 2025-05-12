@@ -76,6 +76,7 @@ body main div.product-row {
   align-items: start;
 }
 body main p.product-name {
+  text-align: start;
   font-weight: 900;
   font-size: 18px;
 }
@@ -140,6 +141,7 @@ body main button.delete-from-cart:active {
   background-color: #fc9376;
 }
 body main p.delivery-option-p {
+  text-align: start;
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 20px;
@@ -165,6 +167,7 @@ body main input.delivery-option-name {
   color: gray;
 }
 body main p.delivery-option-price {
+  padding-left: 0.3rem;
   font-size: 16px;
   font-weight: 900;
   color: red;

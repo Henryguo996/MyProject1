@@ -93,6 +93,7 @@ body {
     }
 
     p.product-name {
+      text-align: start;
       font-weight: 900;
       font-size: 18px;
     }
@@ -170,6 +171,7 @@ body {
     }
 
     p.delivery-option-p {
+      text-align: start;
       font-weight: 900;
       font-size: 18px;
       margin-bottom: 20px;
@@ -200,6 +202,7 @@ body {
     }
 
     p.delivery-option-price {
+      padding-left: 0.3rem;
       font-size: 16px;
       font-weight: 900;
       color: red;

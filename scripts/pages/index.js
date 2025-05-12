@@ -1,5 +1,7 @@
-let html = "";
+import { cart, addToCart, getCartNum } from "../../data/cart.js";
+import { products } from "../../data/products.js";
 
+let html = "";
 products.forEach((product) => {
   html += `
             <div class="product">
@@ -33,29 +35,10 @@ document.querySelector(".products").innerHTML = html;
 document.querySelectorAll(".add-to-cart").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
+    let productId = button.dataset.productId;
+    addToCart(productId);
 
-    let cartItem;
-    const productId = button.dataset.productId;
-    cart.forEach((item) => {
-      if (item.id === productId) {
-        cartItem = item;
-      }
-    });
-
-    if (cartItem) {
-      cartItem.num += 1;
-    } else {
-      cart.push({
-        id: productId,
-        num: 1,
-      });
-    }
-
-    let cartNum = 0;
-    cart.forEach((item) => {
-      cartNum += item.num;
-    });
-
+    const cartNum = getCartNum();
     document.querySelector(".cart-num").innerHTML = cartNum;
     //console.log(cartNum);
     //console.log(cart);
