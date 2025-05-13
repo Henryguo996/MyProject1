@@ -80,4 +80,7 @@ body div.search-container input {
 }
 body table.dataTable thead th {
   cursor: pointer;
+}
+body td a {
+  text-decoration: none;
 }/*# sourceMappingURL=queryorder.css.map */

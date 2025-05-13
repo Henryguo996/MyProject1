@@ -48,8 +48,6 @@
     <div class="search-container">
       <label for="orderId">訂單號：</label>
       <input type="text" id="orderId" placeholder="請輸入訂單號" />
-      <label for="customerName">客戶姓名：</label>
-      <input type="text" id="customerName" placeholder="請輸入客戶姓名" />
       <label for="productName">商品名稱：</label>
       <input type="text" id="productName" placeholder="請輸入商品名稱" />
       <button id="searchBtn">查詢</button>
@@ -60,7 +58,6 @@
       <thead>
         <tr>
           <th>訂單號</th>
-          <th>客戶姓名</th>
           <th>商品名稱</th>
           <th>數量</th>
           <th>總金額</th>
@@ -70,24 +67,21 @@
       <tbody>
         <tr>
           <td>ORD001</td>
-          <td>王小明</td>
-          <td>筆記型電腦</td>
+          <td><a href="">筆記型電腦</a></td>
           <td>1</td>
           <td>30000</td>
           <td>已出貨</td>
         </tr>
         <tr>
           <td>ORD002</td>
-          <td>陳美麗</td>
-          <td>滑鼠</td>
+          <td><a href="">筆記型電腦</a></td>
           <td>2</td>
           <td>1200</td>
           <td>處理中</td>
         </tr>
         <tr>
           <td>ORD003</td>
-          <td>李大仁</td>
-          <td>鍵盤</td>
+          <td><a href="">筆記型電腦</a></td>
           <td>1</td>
           <td>800</td>
           <td>已完成</td>
@@ -131,5 +125,6 @@
         });
       });
     </script>
+    <script type="module" src="data/queryorder.js"></script>
   </body>
 </html>

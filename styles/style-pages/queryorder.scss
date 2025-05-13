@@ -96,4 +96,9 @@ body {
   table.dataTable thead th {
     cursor: pointer;
   }
+  td {
+    a {
+      text-decoration: none;
+    }
+  }
 }
