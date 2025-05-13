@@ -118,3 +118,14 @@ export function getProduct(productId) {
   });
   return returnProduct;
 }
+
+export function searchProduct(searchText) {
+  return products.filter((product) => {
+    if (
+      product.name.includes(searchText) ||
+      product.description.includes(searchText)
+    ) {
+      return product;
+    }
+  });
+}

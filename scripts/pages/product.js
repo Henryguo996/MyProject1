@@ -6,7 +6,6 @@ renderCarNums();
 
 const productId = location.hash.substring(1);
 const product = getProduct(productId);
-console.log(product);
 
 const html = `
 

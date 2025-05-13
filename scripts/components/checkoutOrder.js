@@ -32,9 +32,11 @@ export function renderCheckoutOrder() {
     let cartItem = getProduct(productId);
     html += `
           <div class="product-row js-product-row-${cartItem.id}">
-            <img class="product-image" src="${cartItem.img}" />
+            <a href="product.html#${
+              cartItem.id
+            }"><img class="product-image" src="${cartItem.img}" />
             <div class="product-information">
-                <p class="product-name">${cartItem.name}</p>
+                <p class="product-name">${cartItem.name}</p></a>
                 <div class="product-detail">
                     <div class="product-detail-left">
                         <div class="product-price">

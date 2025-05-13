@@ -11,8 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/style-pages/products.css" />
+    <link rel="stylesheet" href="styles/style-components/search.css" />
   </head>
   <body>
     <header>
@@ -48,9 +47,20 @@
     </header>
 
     <main>
+      <section class="info-products">
+        <section class="info-right">
+          <h3>全站商品</h3>
+          <section class="search">
+            <input class="search-input" placeholder="搜尋" />
+            <button class="search-button">
+              <img class="search-icon" src="./images/icons/search.svg" />
+            </button>
+          </section>
+        </section>
 
-
-        <div class="js-product-info"></div>
+        <section class="product-grid">
+          <div class="products"></div>
+        </section>
       </section>
     </main>
 
@@ -92,6 +102,7 @@
         >
       </section>
     </footer>
+
+    <script type="module" src="scripts/pages/search.js"></script>
   </body>
-  <script type="module" src="scripts/pages/product.js"></script>
 </html>

@@ -15,20 +15,24 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="http://127.0.0.1:3000/index.html">
-        <img src="./images/icons/logo.svg" alt="阿和的購物網站" />
+      <a class="logo" href="index.html">
+        <img src="images/icons/logo.svg" alt="阿和的購物網站" />
         <h1>馬上開始SHOOPING!~</h1>
       </a>
       <nav>
         <ul>
           <li>
-            <a href="#"><i class="fa-solid fa-house"></i> 回首頁</a>
+            <a href="index.html"><i class="fa-solid fa-house"></i> 回首頁</a>
           </li>
           <li>
-            <a href="#"><i class="fa-regular fa-user"></i> 會員登入</a>
+            <a href="members.html"
+              ><i class="fa-regular fa-user"></i> 會員登入</a
+            >
           </li>
           <li>
-            <a href="#"><i class="fa-solid fa-receipt"></i> 訂單查詢</a>
+            <a href="queryorder.html"
+              ><i class="fa-solid fa-receipt"></i> 訂單查詢</a
+            >
           </li>
           <li>
             <a href="checkout.html"
@@ -49,7 +53,7 @@
       </section>
       <section class="members">
         <div>
-          <form action="/signup" method="POST">
+          <form action="#" method="POST">
             <h2>註冊新會員</h2>
             <input
               type="text"
@@ -72,10 +76,10 @@
               name="password"
               minlength="3"
               maxlength="20"
-              pattern="[0-9a-fA-F]{6,8}"
+              pattern="[0-9a-fA-F]{6,12}"
               value=""
               onkeyup="value=value.replace(/\s+/g,'')"
-              placeholder="新增密碼6-8位數"
+              placeholder="新增密碼6-12位數"
             /><br />
             <input
               type="password"
@@ -91,7 +95,7 @@
           </form>
         </div>
         <div>
-          <form action="/signin" method="POST">
+          <form action="#" method="POST">
             <h2>會員登入</h2>
             <input type="text" name="email" placeholder="電子郵件" /><br />
             <input type="password" name="password" placeholder="密碼" /><br />

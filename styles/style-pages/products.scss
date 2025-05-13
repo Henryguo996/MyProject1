@@ -57,183 +57,135 @@ body {
 
   main {
     margin-top: 1rem;
-    section.info-products {
-      h3 {
-        padding-right: 0.5rem;
-      }
-      section.info-right {
-        display: flex;
-        flex: 1;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        section.search {
-          flex: 1;
-          display: flex;
-          flex-direction: row;
-          justify-content: end;
-          align-items: center;
-          max-width: 500px;
-          .search-button {
-            width: 64px;
-            height: 41px;
-            background-color: rgb(240, 240, 240);
-            border-radius: 0 5px 5px 0;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(192, 192, 192, 0.5);
-            cursor: pointer;
-            &:hover {
-              background-color: rgb(230, 230, 230);
-            }
-            .search-icon {
-              height: 24px;
-            }
-          }
-          .search-input {
-            flex: 1;
-            height: 39px;
-            border-radius: 5px 0 0 5px;
-            border-style: solid;
-            border-width: 1px;
-            border-color: rgba(192, 192, 192, 0.5);
-            padding-left: 12px;
-            font-size: 16px;
-            width: 100px;
-          }
-        }
-      }
 
-      div.product-block {
-        display: flex;
-        background-color: white;
-        justify-content: center;
-        border-radius: 15px;
+    div.product-block {
+      display: flex;
+      background-color: white;
+      justify-content: center;
+      border-radius: 15px;
 
-        padding: 10px 40px 25px 40px;
-        align-items: center;
-      }
-      div.product-information {
-        flex: 1;
-        margin: 12px;
-      }
-      img.product-image {
-        width: 400px;
-        border-radius: 16px;
-        margin-right: 30px;
-      }
+      padding: 10px 40px 25px 40px;
+      align-items: center;
+    }
+    div.product-information {
+      flex: 1;
+      margin: 12px;
+    }
+    img.product-image {
+      width: 400px;
+      border-radius: 16px;
+      margin-right: 30px;
+    }
 
-      div.product-name {
-        font-size: 26px;
-        font-weight: 900;
-        margin-top: 12px;
-      }
+    div.product-name {
+      font-size: 26px;
+      font-weight: 900;
+      margin-top: 12px;
+    }
 
-      div.product-price {
-        margin-top: 40px;
-        display: flex;
-        align-items: center;
-        background-color: rgb(242, 242, 242);
-        padding: 15px 20px;
-        border-radius: 10px;
-      }
+    div.product-price {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      background-color: rgb(242, 242, 242);
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
 
-      p.origin-price {
-        font-size: 20px;
-        font-weight: 500;
-        color: gray;
-        text-decoration: line-through;
-        margin-right: 20px;
-      }
+    p.origin-price {
+      font-size: 20px;
+      font-weight: 500;
+      color: gray;
+      text-decoration: line-through;
+      margin-right: 20px;
+    }
 
-      p.discount-price {
-        font-size: 30px;
-        font-weight: 900;
-        color: red;
-      }
+    p.discount-price {
+      font-size: 30px;
+      font-weight: 900;
+      color: red;
+    }
 
-      div.buy-num-row {
-        display: flex;
-        align-items: center;
-        margin-top: 40px;
-      }
+    div.buy-num-row {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+    }
 
-      p.num-p {
-        font-size: 18px;
-        color: gray;
-        margin-right: 40px;
-      }
+    p.num-p {
+      font-size: 18px;
+      color: gray;
+      margin-right: 40px;
+    }
 
-      select.buy-num {
-        font-size: 18px;
-        width: 100px;
-      }
+    select.buy-num {
+      font-size: 18px;
+      width: 100px;
+    }
 
-      button.add-to-cart {
-        margin-top: 50px;
-        width: 200px;
-        font-size: 18px;
-        padding: 15px 0px;
+    button.add-to-cart {
+      margin-top: 50px;
+      width: 200px;
+      font-size: 18px;
+      padding: 15px 0px;
+      background-color: $themeColor;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
         background-color: $themeColor;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        &:hover {
-          background-color: $themeColor;
-        }
-        &:active {
-          background-color: $themeColor;
-        }
       }
+      &:active {
+        background-color: $themeColor;
+      }
+    }
 
-      div.add-success {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-      }
+    div.add-success {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
 
-      div.hidden-element {
-        opacity: 0;
-        transition: opacity 2s ease;
-      }
+    div.hidden-element {
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
 
-      div.visible-element {
-        opacity: 1;
-        transition: opacity 1s ease;
-      }
+    div.visible-element {
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
 
-      img.check-icon {
-        height: 20px;
-        margin-right: 10px;
-      }
+    img.check-icon {
+      height: 20px;
+      margin-right: 10px;
+    }
 
-      p.add-success-p {
-        color: rgb(6, 125, 98);
-        font-size: 18px;
-      }
+    p.add-success-p {
+      color: rgb(6, 125, 98);
+      font-size: 18px;
+    }
 
-      div.description-block {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        background-color: white;
-        border-radius: 15px;
-        padding: 40px;
-      }
+    div.description-block {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px;
+    }
 
-      p.description-p {
-        font-size: 20px;
-        padding: 10px 20px;
-        background-color: rgb(242, 242, 242);
-        border-radius: 8px;
-      }
+    p.description-p {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: rgb(242, 242, 242);
+      border-radius: 8px;
+    }
 
-      p.product-description {
-        margin-top: 30px;
-        padding: 0 20px;
-        line-height: 45px;
-      }
+    p.product-description {
+      margin-top: 30px;
+      padding: 0 20px;
+      line-height: 45px;
     }
   }
 
