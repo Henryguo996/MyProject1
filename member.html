@@ -11,8 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles/general.css" />
-    <link rel="stylesheet" href="./styles/style-pages/checkout.css" />
+    <link rel="stylesheet" href="styles/style-pages/register.css" />
   </head>
   <body>
     <header>
@@ -44,14 +43,34 @@
         </ul> -->
       </nav>
     </header>
-
     <main>
-      <div class="checkout-row">
-        <div class="checkout-left"></div>
-
-        <div class="checkout-right"></div>
-      </div>
+      <section class="info-members">
+        <div>
+          <h3>會員專區</h3>
+        </div>
+      </section>
+      <section class="members">
+        <div>
+          <form action="#" method="POST">
+            <span>基本資料<button>登出</button></span>
+            <input type="text" name="name" placeholder="姓名" /><br />
+            <input type="text" name="email" placeholder="電子郵件" /><br />
+            <input
+              type="password"
+              name="password"
+              placeholder="修改密碼"
+            /><br />
+            <input
+              type="password"
+              name="password"
+              placeholder="確認密碼"
+            /><br />
+            <button>變更</button>
+            <br />
+          </form>
+        </div>
+      </section>
     </main>
-    <script type="module" src="/scripts/pages/checkout.js"></script>
   </body>
+  <script type="module" src="scripts/pages/member.js"></script>
 </html>

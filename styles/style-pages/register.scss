@@ -17,11 +17,10 @@ h6 {
 
 body {
   max-height: 600px;
-  padding-top: 0;
+  //padding-top: 0;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
+
   background-color: #fafafa;
   header {
     background-color: white;
@@ -78,23 +77,23 @@ body {
   text-align: center;
 
   main {
-    //background-color: rgba(39, 37, 37, 0.651);
+    padding-left: 250px;
+    padding-right: 250px;
     width: 100%;
     section.info-members {
       display: flex;
       justify-content: center;
-      align-items: center;
       h3 {
         margin: 1rem;
         font-size: 2rem;
         color: black;
         text-align: center;
       }
+      text-align: end;
     }
 
     .members {
-      display: flex;
-      justify-content: center;
+      //justify-content: center;
 
       div {
         background-color: rgba(39, 37, 37, 0.671);
@@ -104,7 +103,15 @@ body {
         form {
           display: block;
           margin: 2rem;
+          span {
+            margin: 0.5rem;
+            font-size: 1.5rem;
+            color: black;
 
+            button {
+              font-size: 1rem;
+            }
+          }
           h2 {
             margin: 1rem;
             color: white;
@@ -135,7 +142,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   body {
     header {
       section.searcharea {
@@ -158,6 +165,8 @@ body {
       }
     }
     main {
+      padding-left: 30px;
+      padding-right: 30px;
       section.info-members {
         display: none;
       }

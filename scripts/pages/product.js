@@ -1,13 +1,77 @@
 import { getProduct } from "../../data/products.js";
 import { renderCarNums } from "../components/renderCarNum.js";
 import { addToCart } from "../../data/cart.js";
+import { checkLogin } from "../components/checkMember.js";
 
 renderCarNums();
 
 const productId = location.hash.substring(1);
 const product = getProduct(productId);
 
-const html = `
+function showAddSuccess() {
+  const successElement = document.querySelector(".add-success");
+  if (successElement.classList.contains("hidden-element")) {
+    successElement.classList.remove("hidden-element");
+    successElement.classList.add("visible-element");
+
+    setTimeout(() => {
+      successElement.classList.remove("visible-element");
+      successElement.classList.add("hidden-element");
+    }, 1000);
+  }
+}
+
+if (checkLogin === null) {
+  const html = `
+
+          <div class="product-block">
+            <img
+              class="product-image"
+              src="${product.img}"
+            />
+            <div class="product-information">
+              <h1 class="product-name">${product.name}</h1>
+
+              <div class="product-price">
+              ${
+                product.originPrice
+                  ? '<p class="origin-price">$' + product.originPrice + "</p>"
+                  : ""
+              }
+                <p class="discount-price">$${product.discountPrice}</p>
+              </div>
+
+              <div class="buy-num-row">
+                <p class="num-p">數量</p>
+                <select class="buy-num">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              
+              <button class="add-to-cart"><a style="text-decoration: none;" href="login.html">加入購物車</a></button>
+
+            </div>
+          </div>
+          <div class="description-block">
+            <p class="description-p">商品描述</p>
+            <p class="product-description">${product.description}
+            </p>
+          </div>
+  
+`;
+
+  document.querySelector(".js-product-info").innerHTML = html;
+} else {
+  const html = `
 
           <div class="product-block">
             <img
@@ -53,28 +117,14 @@ const html = `
             <p class="product-description">${product.description}
             </p>
           </div>
-  
+
 `;
+  document.querySelector(".js-product-info").innerHTML = html;
+  document.querySelector(".add-to-cart").addEventListener("click", () => {
+    const buyNum = Number(document.querySelector(".buy-num").value);
 
-function showAddSuccess() {
-  const successElement = document.querySelector(".add-success");
-  if (successElement.classList.contains("hidden-element")) {
-    successElement.classList.remove("hidden-element");
-    successElement.classList.add("visible-element");
-
-    setTimeout(() => {
-      successElement.classList.remove("visible-element");
-      successElement.classList.add("hidden-element");
-    }, 1000);
-  }
+    addToCart(productId, buyNum);
+    renderCarNums();
+    showAddSuccess();
+  });
 }
-
-document.querySelector(".js-product-info").innerHTML = html;
-
-document.querySelector(".add-to-cart").addEventListener("click", () => {
-  const buyNum = Number(document.querySelector(".buy-num").value);
-
-  addToCart(productId, buyNum);
-  renderCarNums();
-  showAddSuccess();
-});
